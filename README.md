@@ -67,8 +67,10 @@ Search-ForBrowserCredentials
 Send-InfoToC2Server
 ```
 
-So we look out for some unique part of the script `"Created by the one and only M.M"` and then try to search it on the github, which lead us to this issue:
-`https://github.com/Bloatware-WarevilleTHM/CryptoWallet-Search/issues/1` which lead to user `MM-WarevilleTHM` who was trying to asking questions and mention this script there, when we go to his profile's username repository this is what we found:
+The link of the script which is `"https://raw.githubusercontent.com/MM-WarevilleTHM/IS/refs/heads/main/IS.ps1"` so in here `MM-WarevilleTHM` is the github username of the person from which the script is downloading, now we know it's him but if we like to gather some more proof then, we look out for some unique part of the script `"Created by the one and only M.M"` and then try to search it on the github, which lead us to this issue:
+`https://github.com/Bloatware-WarevilleTHM/CryptoWallet-Search/issues/1` where user `MM-WarevilleTHM` was trying to ask questions about creating this script. 
+
+when we go to his profile's username repository this is what we found:
 ```
 - 🦹‍♂️ Hi, I’m M.M, also known as Mayor Malware. I run things in Wareville Town.
 - 👀 This year, SOC-mas is not going to happen and I will do all I can to sabotage it.
