@@ -80,3 +80,21 @@ when we go to his profile's username repository this is what we found:
 
 In Short:
 We caught him. ✨😁
+
+## Day 2 (Log Analysis)
+Now we have to check the logs to identify whether it's False Positive or True Positive. 
+
+For this first we login to the Elastic SIEM (Security Information and Event Management) and then we have to check some activity between Dec 1 2024 0900 to 0930 then we found that someone run some Powershell commands on each machine, the usename was `"service_admin"` which was very generic which make it more suspicious.
+Then we have to look into the ip address of source which is available for the authentication events, Now we have to look for auth events just before the execution of those Powershell commands.
+
+To get better understanding of the events we expand our search from Nov 29 0000 to Dec 01 2330, where we saw the spike in activity of by user `"service_admin"` to exactly look for the spike we filter out one of the ip address `10.0.11.11` so see for other ip address which we got `10.0.255.1` that got so many failed login attempts which means it was a brute force attack because if this was because of a outdated script then it would not stop even after the sucess of auth but this one stopped after the sucessful login attempt. Now what we have to check is the Process activity it did just after login, which lead use to some similar command being executed which was:
+
+```
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -EncodedCommand SQBuAHMAdABhAGwAbAAtAFcAaQBuAGQAbwB3AHMAVQBwAGQAYQB0AGUAIAAtAEEAYwBjAGUAcAB0AEEAbABsACAALQBBAHUAdABvAFIAZQBiAG8AbwB0AA==
+```
+
+here is a encoded command:
+`SQBuAHMAdABhAGwAbAAtAFcAaQBuAGQAbwB3AHMAVQBwAGQAYQB0AGUAIAAtAEEAYwBjAGUAcAB0AEEAbABsACAALQBBAHUAdABvAFIAZQBiAG8AbwB0AA==`
+
+so we goto cyberchef and try to decode it, so generally powershell command usually use Base54 UTF-16LE encoding and we it decoded into the text use use the recipe `From Base64` and `Decode Text` which reveal the real command `Install-WindowsUpdate -AcceptAll -AutoReboot`.
+So someone was trying to help the McSkidy and the team secure their defences and no malicious activity happend. 😄 
