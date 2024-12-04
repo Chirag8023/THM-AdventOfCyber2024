@@ -1,5 +1,5 @@
 # Advent Of Cyber 2024 🎄
-just to remember what was the challenges were about.
+Just a memoir of the challenges
 
 ## Day 01 (OPSEC)
 We explored a YouTube-to-MP3 website which was installing malware to it's users and we analyze the meta-data of the malware through that we back trace to the attacker's actual identity. 
