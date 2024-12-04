@@ -2,7 +2,11 @@
 just to remember what was the challenges were about.
 
 ## Day 01 (OPSEC)
-So it basicly was about exploring a YouTube-to-MP3 website which was installing virus to it's users and tracing the attacker. 
+We explored a YouTube-to-MP3 website which was installing malware to it's users and we analyze the meta-data of the malware through that we back trace to the attacker's actual identity. 
+
+- **Commands & Tools Used :** Find, Exiftool, Github.
 
 ## Day 2 (Log Analysis)
-It was about analyzing through the security logs of a platform to find out if there was any malicious activity on the server and  is there any damage happened.
+We Investigated security logs of a website and find pattern in the authentication and detected a brute force attack then examine the encoded powershell command that has been run on the systems.
+
+- **Commands & Tools Used :** Elastic SIEM, CyberChef.
