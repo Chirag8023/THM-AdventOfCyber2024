@@ -26,4 +26,4 @@ We recreated MITRE ATT&CK technique `T1566.001 Spearphishing` using the Atomic R
 We used the `Burp Suite` to intercept request and response and try to findout if the website is vulnerable to XXE(XML external entity) Injection then exploit it to get data only admins can access.
 
 - **Commands & Tools Used :** Burp Suite.
-- **Techniques Used :** XXE(XML external entity) Injetion.
+- **Techniques Used :** XXE(XML external entity) Injection.
