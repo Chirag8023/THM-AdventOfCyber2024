@@ -14,5 +14,11 @@ We Investigated security logs of a website and find pattern in the authenticatio
 ## Day 03 (Log Analysis - Purple Teaming)
 This time we used ELK to search through logs and findout a specific ip which was using a web shell through profile picture upload and in second half we log into a website as admin because of weak/common credentials and try to exploit a RCE via file upload. 
 
-- **Commands & Tools Used :** . ELK (Elasticsearch, Logstash, and Kibana), ls, cat.
+- **Commands & Tools Used :**  ELK (Elasticsearch, Logstash, and Kibana), ls, cat.
 - **Techniques Used :** RCE (Remote Code Execution).
+
+## Day 04 (Atomic Red Team - Purple Teaming)
+We recreated MITRE ATT&CK technique `T1566.001 Spearphishing` using the Atomic Red Team library, then in Windows Event Logs analyze Sysmon logs confirming the compromise. Next, we tested technique `T1059.003 Command and Scripting Interpreter: Windows Command Shell`, after iterating through multiple test we found the one from which the machine was vulnerable to.
+
+- **Commands & Tools Used :** Atomic Red Team Library, Sysmon, Windows Event Logs.
+
