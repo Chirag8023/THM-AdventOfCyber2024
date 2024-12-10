@@ -27,3 +27,10 @@ We used the `Burp Suite` to intercept request and response and try to findout if
 
 - **Commands & Tools Used :** Burp Suite.
 - **Techniques Used :** XXE(XML external entity) Injection.
+
+## Day 06 (Sandboxes - Blue Teaming)
+
+## Day 07 (AWS Log Analysis - Blue Teaming)
+## Day 08 (Shellcodes - Purple Teaming)
+## Day 09 (GRC - Blue Teaming)
+## Day 10 (Phishing - Red Teaming)
