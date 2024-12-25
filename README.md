@@ -73,7 +73,9 @@ We went through amazon cloudtrail and rds logs using `jq` and `grep` to find out
 <tr><th>8.</th><td>
 
 ## Shellcodes ( Purple Teaming )
+Using `msfvenom` we generate a shellcode then try to achieve a reverse shell by executing that to the target machine by loading it to memory.
 
+- **Commands & Tools Used :** msfvenom, nc.
 <br>
 </td></tr>
 
