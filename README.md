@@ -82,6 +82,7 @@ Using `msfvenom` we generate a shellcode then try to achieve a reverse shell by 
 <tr><th>9.</th><td>
 
 ## GRC ( Blue Teaming )
+We perform a Risk Assessments based on the questions answerd by different vendors to choose the one with lowest risk.
 
 <br>
 </td></tr>
