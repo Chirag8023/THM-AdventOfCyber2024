@@ -1,11 +1,15 @@
+<table border=4><tr><th>
+  
 # Advent Of Cyber 2024 🎄
 Just a memoir of the challenges
 
+</th></tr><tr><td>
+  
 ## Day 01 (OPSEC - Purple Teaming)
 We explored a YouTube-to-MP3 website which was installing malware to it's users and analyze the meta-data of the malware through that we back trace to the attacker's actual identity. 
 
 - **Commands & Tools Used :** Find, Exiftool, Github.
-
+  
 ## Day 02 (Log Analysis - Blue Teaming)
 We Investigated security logs of a website and find pattern in the authentication and detected a brute force attack then examine the encoded powershell command that has been run on the systems.
 
@@ -34,3 +38,6 @@ We used the `Burp Suite` to intercept request and response and try to findout if
 ## Day 08 (Shellcodes - Purple Teaming)
 ## Day 09 (GRC - Blue Teaming)
 ## Day 10 (Phishing - Red Teaming)
+
+</td></tr>
+</table>
