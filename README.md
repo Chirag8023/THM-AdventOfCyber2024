@@ -55,105 +55,129 @@ We used the `Burp Suite` to intercept request and response and try to findout if
 <tr><th>6.</th><td>
 
 ## Sandboxes ( Blue Teaming )
+We tested a malware in virtual machine and detect it with `YARA rules` after getting detected we obscure it by using encoded commands, but it was still detectable by `floss` and `sysmon logs`.
+
+- **Commands & Tools Used :** YARA, Sysmon, CyberChef, FLOSS.
+<br>
 </td></tr>
 
 <tr><th>7.</th><td>
 
 ## AWS Log Analysis ( Blue Teaming )
+We went through amazon cloudtrail and rds logs using `jq` and `grep` to find out who actually responsible for altering the qr code on donation website.
 
+- **Commands & Tools Used :** JQ, grep.
+<br>
 </td></tr>
 
 <tr><th>8.</th><td>
 
 ## Shellcodes ( Purple Teaming )
 
+<br>
 </td></tr>
 
 <tr><th>9.</th><td>
 
 ## GRC ( Blue Teaming )
 
+<br>
 </td></tr>
 
 <tr><th>10.</th><td>
 
 ## Phishing ( Red Teaming )
 
+<br>
 </td></tr>
 
 <tr><th>11.</th><td>
 
 ## Wi-Fi attacks ( Red Teaming )
 
+<br>
 </td></tr>
 
 <tr><th>12.</th><td>
 
 ## Web timing attacks ( Red Teaming )
 
+<br>
 </td></tr>
 
 <tr><th>13.</th><td>
 
 ## Websockets ( Red Teaming )
 
+<br>
 </td></tr>
 
 <tr><th>14.</th><td>
 
 ## Certificate mismanagement ( Red Teaming )
 
+<br>
 </td></tr>
 
 <tr><th>15.</th><td>
 
 ## Active Directory ( Blue Teaming )
 
+<br>
 </td></tr>
 <tr><th>16.</th><td>
 
 ## Azure ( Red Teaming )
 
+<br>
 </td></tr>
 <tr><th>17.</th><td>
 
 ## Log analysis ( Blue Teaming )
 
+<br>
 </td></tr>
 <tr><th>18.</th><td>
 
 ## Prompt injection ( Red Teaming )
 
+<br>
 </td></tr>
 <tr><th>19.</th><td>
 
 ## Game Hacking ( Red Teaming )
 
+<br>
 </td></tr>
 <tr><th>20.</th><td>
 
 ## Traffic analysis ( Blue Teaming )
 
+<br>
 </td></tr>
 <tr><th>21.</th><td>
 
 ## Reverse engineering ( Blue Teaming )
 
+<br>
 </td></tr>
 <tr><th>22.</th><td>
 
 ## Kubernetes DFIR ( Blue Teaming )
 
+<br>
 </td></tr>
 <tr><th>23.</th><td>
 
 ## Hash cracking ( Red Teaming )
 
+<br>
 </td></tr>
 <tr><th>24.</th><td>
 
 ## Communication protocols ( Blue Teaming )
 
+<br>
 </td></tr>
 
 </table>
