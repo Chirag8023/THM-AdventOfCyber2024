@@ -90,7 +90,10 @@ We perform a Risk Assessments based on the questions answerd by different vendor
 <tr><th>10.</th><td>
 
 ## Phishing ( Red Teaming )
+We use `Metasploit Framework` to create a malicious macro and sent it through similar looking email and when the macro file opend we got access to the target system.
 
+- **Commands & Tools Used :** Metasploit Framework.
+- **Techniques Used :** typosquatting.
 <br>
 </td></tr>
 
