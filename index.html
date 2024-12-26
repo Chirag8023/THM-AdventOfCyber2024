@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advent Of Cyber 2024 🎄</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #f0f0f0;
+      color: #333;
+      margin: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #0066cc;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #ffcc00;
+    }
+    td {
+      background-color: #ffffff;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    hr {
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Advent Of Cyber 2024 🎄</h1>
+<p style="text-align: center;">Just a memoir of the challenges</p>
+
+<table>
+  <tr>
+    <th>Day</th>
+    <th>Challenge</th>
+  </tr>
+  <tr>
+    <td>1.</td>
+    <td>
+      <h2>OPSEC ( Purple Teaming )</h2>
+      We explored a YouTube-to-MP3 website which was installing malware to its users and analyzed the meta-data of the malware through which we backtracked to the attacker's actual identity.
+      <ul>
+        <li><strong>Commands & Tools Used:</strong> Find, Exiftool, Github</li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td>
+      <h2>Log Analysis ( Blue Teaming )</h2>
+      We investigated security logs of a website, found patterns in the authentication, detected a brute force attack, and examined the encoded PowerShell command that had been run on the systems.
+      <ul>
+        <li><strong>Commands & Tools Used:</strong> Elastic SIEM, CyberChef</li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td>
+      <h2>Log Analysis ( Purple Teaming )</h2>
+      This time, we used ELK to search through logs and found a specific IP that was using a web shell through a profile picture upload. In the second half, we logged into a website as admin because of weak/common credentials and tried to exploit an RCE via file upload.
+      <ul>
+        <li><strong>Commands & Tools Used:</strong> ELK (Elasticsearch, Logstash, and Kibana), ls, cat</li>
+        <li><strong>Techniques Used:</strong> RCE (Remote Code Execution)</li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>4.</td>
+    <td>
+      <h2>Atomic Red Team ( Purple Teaming )</h2>
+      We recreated MITRE ATT&CK technique `T1566.001 Spearphishing` using the Atomic Red Team library, then in Windows Event Logs analyzed Sysmon logs confirming the compromise. Next, we tested technique `T1059.003 Command and Scripting Interpreter: Windows Command Shell`. After iterating through multiple tests, we found the one from which the machine was vulnerable.
+      <ul>
+        <li><strong>Commands & Tools Used:</strong> Atomic Red Team Library, Sysmon, Windows Event Logs</li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>5.</td>
+    <td>
+      <h2>XXE ( Red Teaming )</h2>
+      We used `Burp Suite` to intercept requests and responses and tried to find out if the website is vulnerable to XXE (XML External Entity) Injection, then exploited it to get data only admins can access.
+      <ul>
+        <li><strong>Commands & Tools Used:</strong> Burp Suite</li>
+        <li><strong>Techniques Used:</strong> XXE (XML External Entity) Injection</li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>6.</td>
+    <td>
+      <h2>Sandboxes ( Blue Teaming )</h2>
+      We tested a malware in a virtual machine and detected it with `YARA rules`. After getting detected, we obscured it by using encoded commands, but it was still detectable by `floss` and `sysmon logs`.
+      <ul>
+        <li><strong>Commands & Tools Used:</strong> YARA, Sysmon, CyberChef, FLOSS</li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>7.</td>
+    <td>
+      <h2>AWS Log Analysis ( Blue Teaming )</h2>
+      We went through Amazon CloudTrail and RDS logs using `jq` and `grep` to find out who was actually responsible for altering the QR code on the donation website.
+      <ul>
+        <li><strong>Commands & Tools Used:</strong> JQ, grep</li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>8.</td>
+    <td>
+      <h2>Shellcodes ( Purple Teaming )</h2>
+      Using `msfvenom`, we generated a shellcode, then tried to achieve a reverse shell by executing it on the target machine by loading it into memory.
+      <ul>
+        <li><strong>Commands & Tools Used:</strong> msfvenom, nc</li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>9.</td>
+    <td>
+      <h2>GRC ( Blue Teaming )</h2>
+      We performed a Risk Assessment based on the answers provided by different vendors to choose the one with the lowest risk.
+      <hr>
+    </td>
+  </tr>
+  <tr>
+    <td>10.</td>
+    <td>
+      <h2>Phishing ( Red Teaming )</h2>
+      We used `Metasploit Framework` to create a malicious macro and sent it through a similar-looking email. When the macro file was opened, we got access to the target system.
+      <ul>
+        <li><strong>Commands & Tools Used:</strong> Metasploit Framework</li>
+        <li><strong>Techniques Used:</strong> Typosquatting</li>
+      </ul>
+      <hr>
+    </td>
+  </tr>
+  <!-- Continue for all days... -->
+</table>
+
+</body>
+</html>
