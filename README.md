@@ -189,3 +189,7 @@ We got into monitor mode using `iw dev`, then use `airodump-ng` to scan for near
 </td></tr>
 
 </table>
+
+<table border=4>
+  ![Certificate](https://raw.githubusercontent.com/Chirag8023/THM-AdventOfCyber2024/refs/heads/main/thmaoc24_certificate.png)
+</table>
