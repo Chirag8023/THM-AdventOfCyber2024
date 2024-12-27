@@ -100,7 +100,7 @@ We use `Metasploit Framework` to create a malicious macro and sent it through si
 <tr><th>11.</th><td>
 
 ## Wi-Fi attacks ( Red Teaming )
-We got into monitor mode using `iw dev`, then use `airodump-ng` to scan for nearby networks, capture the 4 way handshake by sending deauth packets to specific BSSID then crack the password using `aircrack-ng` dictionary attack on the captured handshake file.
+First we set our wifi into monitor mode using `iw`, then use `airodump-ng` to scan for nearby networks, sent deauth packets to specific BSSID then capture the 4 way handshake into a file then dictionary attack on the captured handshake file using `aircrack-ng` .
 
 - **Commands & Tools Used :** iw, airodump-ng, aircrack-ng, aireplay-ng.
 <br>
