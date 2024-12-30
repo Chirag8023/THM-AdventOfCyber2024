@@ -193,7 +193,7 @@ First we set our wifi into monitor mode using `iw`, then use `airodump-ng` to sc
 <table border=4>
   <tr><th>
     
-     Advent Of Cyber'24 Certificate (Proof I survived the process, not just the summary! 👴)
+     Advent Of Cyber'24 Certificate (Proof I did the work, not just the summary! 👴)
   
   </th></tr>
   <tr><th>
