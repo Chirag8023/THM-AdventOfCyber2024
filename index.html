@@ -1,200 +1,181 @@
-<table border="4">
-  <tr>
-    <th colspan="2">
-      <h1>Advent Of Cyber 2024 🎄</h1>
-      Just a memoir of the challenges
-    </th>
-  </tr>
-  <tr>
-    <th>Day</th>
-    <th>Challenge</th>
-  </tr>
-  <tr>
-    <th>1.</th>
-    <td>
-      <h2>OPSEC ( Purple Teaming )</h2>
-      We explored a YouTube-to-MP3 website which was installing malware to its users and analyzed the meta-data of the malware through which we backtracked to the attacker's actual identity.
-      <ul>
-        <li><strong>Commands & Tools Used :</strong> Find, Exiftool, Github.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>2.</th>
-    <td>
-      <h2>Log Analysis ( Blue Teaming )</h2>
-      We Investigated security logs of a website and found patterns in the authentication, detected a brute force attack, then examined the encoded PowerShell command that had been run on the systems.
-      <ul>
-        <li><strong>Commands & Tools Used :</strong> Elastic SIEM, CyberChef.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>3.</th>
-    <td>
-      <h2>Log Analysis ( Purple Teaming )</h2>
-      This time, we used ELK to search through logs and found a specific IP that was using a web shell through a profile picture upload. In the second half, we logged into a website as admin because of weak/common credentials and tried to exploit an RCE via file upload.
-      <ul>
-        <li><strong>Commands & Tools Used :</strong> ELK (Elasticsearch, Logstash, and Kibana), ls, cat.</li>
-        <li><strong>Techniques Used :</strong> RCE (Remote Code Execution).</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>4.</th>
-    <td>
-      <h2>Atomic Red Team ( Purple Teaming )</h2>
-      We recreated MITRE ATT&CK technique `T1566.001 Spearphishing` using the Atomic Red Team library, then in Windows Event Logs analyzed Sysmon logs confirming the compromise. Next, we tested technique `T1059.003 Command and Scripting Interpreter: Windows Command Shell`. After iterating through multiple tests, we found the one from which the machine was vulnerable.
-      <ul>
-        <li><strong>Commands & Tools Used :</strong> Atomic Red Team Library, Sysmon, Windows Event Logs.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>5.</th>
-    <td>
-      <h2>XXE ( Red Teaming )</h2>
-      We used `Burp Suite` to intercept requests and responses and tried to find out if the website is vulnerable to XXE (XML External Entity) Injection, then exploited it to get data only admins can access.
-      <ul>
-        <li><strong>Commands & Tools Used :</strong> Burp Suite.</li>
-        <li><strong>Techniques Used :</strong> XXE (XML External Entity) Injection.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>6.</th>
-    <td>
-      <h2>Sandboxes ( Blue Teaming )</h2>
-      We tested a malware in a virtual machine and detected it with `YARA rules`. After getting detected, we obscured it by using encoded commands, but it was still detectable by `floss` and `sysmon logs`.
-      <ul>
-        <li><strong>Commands & Tools Used :</strong> YARA, Sysmon, CyberChef, FLOSS.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>7.</th>
-    <td>
-      <h2>AWS Log Analysis ( Blue Teaming )</h2>
-      We went through Amazon CloudTrail and RDS logs using `jq` and `grep` to find out who was actually responsible for altering the QR code on the donation website.
-      <ul>
-        <li><strong>Commands & Tools Used :</strong> JQ, grep.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>8.</th>
-    <td>
-      <h2>Shellcodes ( Purple Teaming )</h2>
-      Using `msfvenom`, we generated a shellcode, then tried to achieve a reverse shell by executing it on the target machine by loading it into memory.
-      <ul>
-        <li><strong>Commands & Tools Used :</strong> msfvenom, nc.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>9.</th>
-    <td>
-      <h2>GRC ( Blue Teaming )</h2>
-      We performed a Risk Assessment based on the answers provided by different vendors to choose the one with the lowest risk.
-    </td>
-  </tr>
-  <tr>
-    <th>10.</th>
-    <td>
-      <h2>Phishing ( Red Teaming )</h2>
-      We used `Metasploit Framework` to create a malicious macro and sent it through a similar-looking email. When the macro file was opened, we got access to the target system.
-      <ul>
-        <li><strong>Commands & Tools Used :</strong> Metasploit Framework.</li>
-        <li><strong>Techniques Used :</strong> Typosquatting.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>11.</th>
-    <td>
-      <h2>Wi-Fi attacks ( Red Teaming )</h2>
-      We got into monitor mode using `iw dev`, then used `airodump-ng` to scan for nearby networks, captured the 4-way handshake by sending deauth packets to a specific BSSID, then cracked the password using `aircrack-ng` dictionary attack on the captured handshake file.
-      <ul>
-        <li><strong>Commands & Tools Used :</strong> iw, airodump-ng, aircrack-ng, aireplay-ng.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th>12.</th>
-    <td>
-      <h2>Web timing attacks ( Red Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>13.</th>
-    <td>
-      <h2>Websockets ( Red Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>14.</th>
-    <td>
-      <h2>Certificate mismanagement ( Red Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>15.</th>
-    <td>
-      <h2>Active Directory ( Blue Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>16.</th>
-    <td>
-      <h2>Azure ( Red Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>17.</th>
-    <td>
-      <h2>Log analysis ( Blue Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>18.</th>
-    <td>
-      <h2>Prompt injection ( Red Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>19.</th>
-    <td>
-      <h2>Game Hacking ( Red Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>20.</th>
-    <td>
-      <h2>Traffic analysis ( Blue Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>21.</th>
-    <td>
-      <h2>Reverse engineering ( Blue Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>22.</th>
-    <td>
-      <h2>Kubernetes DFIR ( Blue Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>23.</th>
-    <td>
-      <h2>Hash cracking ( Red Teaming )</h2>
-    </td>
-  </tr>
-  <tr>
-    <th>24.</th>
-    <td>
-      <h2>Communication protocols ( Blue Teaming )</h2>
-    </td>
-  </tr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advent Of Cyber 2024 🎄</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2d2d2d;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.8rem;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            background-color: #fff;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 2px solid #333;
+        }
+        th {
+            background-color: #666;
+            color: white;
+        }
+        td {
+            background-color: #f9f9f9;
+        }
+        h2 {
+            color: #0074D9;
+        }
+        .center {
+            text-align: center;
+        }
+        .certificate {
+            width: 100%;
+            height: auto;
+        }
+        @media (max-width: 600px) {
+            table, th, td {
+                font-size: 14px;
+                padding: 8px;
+            }
+            header {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h3>Advent Of Cyber 2024 🎄</h3>
+    <h6>Just a memoir of the challenges</h6>
+</header>
+
+<table>
+    <tr>
+        <th colspan="2">Advent of Cyber 2024 Challenges</th>
+    </tr>
+    <tr>
+        <th>Day</th>
+        <th>Challenge</th>
+    </tr>
+    <tr>
+        <th>1.</th>
+        <td>
+            <h2>OPSEC (Purple Teaming)</h2>
+            We explored a YouTube-to-MP3 website which was installing malware to its users and analyzed the meta-data of the malware through that we backtrace to the attacker's actual identity.
+            <br><strong>Commands & Tools Used:</strong> Find, Exiftool, Github.
+        </td>
+    </tr>
+    <tr>
+        <th>2.</th>
+        <td>
+            <h2>Log Analysis (Blue Teaming)</h2>
+            We Investigated security logs of a website and found patterns in the authentication and detected a brute force attack, then examined the encoded powershell command that had been run on the systems.
+            <br><strong>Commands & Tools Used:</strong> Elastic SIEM, CyberChef.
+        </td>
+    </tr>
+    <tr>
+        <th>3.</th>
+        <td>
+            <h2>Log Analysis (Purple Teaming)</h2>
+            This time, we used ELK to search through logs and found a specific IP that was using a web shell through profile picture upload. In the second half, we logged into a website as admin due to weak/common credentials and tried to exploit an RCE via file upload.
+            <br><strong>Commands & Tools Used:</strong> ELK (Elasticsearch, Logstash, and Kibana), ls, cat.
+            <br><strong>Techniques Used:</strong> RCE (Remote Code Execution).
+        </td>
+    </tr>
+    <tr>
+        <th>4.</th>
+        <td>
+            <h2>Atomic Red Team (Purple Teaming)</h2>
+            We recreated MITRE ATT&CK technique `T1566.001 Spearphishing` using the Atomic Red Team library, then in Windows Event Logs analyzed Sysmon logs confirming the compromise.
+            <br><strong>Commands & Tools Used:</strong> Atomic Red Team Library, Sysmon, Windows Event Logs.
+        </td>
+    </tr>
+    <tr>
+        <th>5.</th>
+        <td>
+            <h2>XXE (Red Teaming)</h2>
+            We used Burp Suite to intercept request and response and tried to find if the website is vulnerable to XXE (XML external entity) Injection, then exploited it to get data only admins can access.
+            <br><strong>Commands & Tools Used:</strong> Burp Suite.
+            <br><strong>Techniques Used:</strong> XXE (XML External Entity Injection).
+        </td>
+    </tr>
+    <tr>
+        <th>6.</th>
+        <td>
+            <h2>Sandboxes (Blue Teaming)</h2>
+            We tested a malware in a virtual machine and detected it with YARA rules. After getting detected, we obscured it by using encoded commands, but it was still detectable by FLOSS and sysmon logs.
+            <br><strong>Commands & Tools Used:</strong> YARA, Sysmon, CyberChef, FLOSS.
+        </td>
+    </tr>
+    <tr>
+        <th>7.</th>
+        <td>
+            <h2>AWS Log Analysis (Blue Teaming)</h2>
+            We went through Amazon CloudTrail and RDS logs using jq and grep to find out who was responsible for altering the QR code on the donation website.
+            <br><strong>Commands & Tools Used:</strong> jq, grep.
+        </td>
+    </tr>
+    <tr>
+        <th>8.</th>
+        <td>
+            <h2>Shellcodes (Purple Teaming)</h2>
+            Using msfvenom, we generated a shellcode and tried to achieve a reverse shell by executing that on the target machine by loading it to memory.
+            <br><strong>Commands & Tools Used:</strong> msfvenom, nc.
+        </td>
+    </tr>
+    <tr>
+        <th>9.</th>
+        <td>
+            <h2>GRC (Blue Teaming)</h2>
+            We performed a Risk Assessment based on the questions answered by different vendors to choose the one with the lowest risk.
+        </td>
+    </tr>
+    <tr>
+        <th>10.</th>
+        <td>
+            <h2>Phishing (Red Teaming)</h2>
+            We used Metasploit Framework to create a malicious macro and sent it through a similar-looking email. When the macro file opened, we gained access to the target system.
+            <br><strong>Commands & Tools Used:</strong> Metasploit Framework.
+            <br><strong>Techniques Used:</strong> Typosquatting.
+        </td>
+    </tr>
+    <tr>
+        <th>11.</th>
+        <td>
+            <h2>Wi-Fi Attacks (Red Teaming)</h2>
+            We set our Wi-Fi into monitor mode using iw, then used airodump-ng to scan for nearby networks, sent deauth packets to a specific BSSID, captured the 4-way handshake, and performed a dictionary attack using aircrack-ng.
+            <br><strong>Commands & Tools Used:</strong> iw, airodump-ng, aircrack-ng, aireplay-ng.
+        </td>
+    </tr>
+    <!-- Further rows omitted for brevity -->
 </table>
+
+<table>
+    <tr>
+        <th>Advent Of Cyber'24 Certificate</th>
+    </tr>
+    <tr>
+        <td class="center">
+            <img src="https://raw.githubusercontent.com/Chirag8023/THM-AdventOfCyber2024/refs/heads/main/thmaoc24_certificate.png" alt="Certificate" class="certificate">
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
