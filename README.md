@@ -29,7 +29,6 @@ We Investigated security logs of a website and find pattern in the authenticatio
 This time We used ELK to search through logs and findout a specific ip which was using a web shell through profile picture upload and in second half We log into a website as admin because of weak/common credentials and try to exploit a RCE via file upload. 
 
 - **Commands & Tools Used :**  ELK (Elasticsearch, Logstash, and Kibana), ls, cat.
-- **Techniques Used :** RCE (Remote Code Execution).
 <br>
 </td></tr>
 
@@ -48,7 +47,6 @@ We recreated MITRE ATT&CK technique `T1566.001 Spearphishing` using the Atomic R
 We used the `Burp Suite` to intercept request and response and try to findout if the website is vulnerable to XXE(XML external entity) Injection then exploit it to get data only admins can access.
 
 - **Commands & Tools Used :** Burp Suite.
-- **Techniques Used :** XXE(XML external entity) Injection.
 <br>
 </td></tr>
 
@@ -93,7 +91,6 @@ We perform a Risk Assessments based on the questions answerd by different vendor
 We use `Metasploit Framework` to create a malicious macro and sent it through similar looking email and when the macro file opend we got access to the target system.
 
 - **Commands & Tools Used :** Metasploit Framework.
-- **Techniques Used :** typosquatting.
 <br>
 </td></tr>
 
